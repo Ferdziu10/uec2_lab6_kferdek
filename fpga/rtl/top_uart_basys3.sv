@@ -117,18 +117,13 @@
    clk_wiz_0_clk_wiz inst
    (
    // Clock out ports  
-   .clk100MHz(clk100MHz),
+   .clk_100MHz(clk100MHz),
+   .clk_50MHz(clk50MHz),
    // Status and control signals               
    .locked(locked),
   // Clock in ports
    .clk(clk)
    );
- 
-    clk_divider(
-        .clk(clk100MHz),
-        .clk50MHz(clk50MHz)
-    );
- 
  
  /**
   *  Project functional top module
@@ -138,13 +133,12 @@
      .clk(clk50MHz),
      .clk100MHz(clk100MHz),
      .rst(btnC),
-     .r(vgaRed),
-     .g(vgaGreen),
-     .b(vgaBlue),
-     .hs(Hsync),
-     .vs(Vsync),
-     .ps2_clk(PS2Clk),
-     .ps2_data(PS2Data)
+     .rx_monitor,
+     .tx_monitor,
+     .rx,
+     .tx,
+     .loopback_enable
+
  );
  
  endmodule

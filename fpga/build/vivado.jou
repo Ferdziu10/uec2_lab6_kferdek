@@ -1,0 +1,22 @@
+#-----------------------------------------------------------
+# Vivado v2021.2 (64-bit)
+# SW Build 3367213 on Tue Oct 19 02:47:39 MDT 2021
+# IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
+# Start of session at: Tue May 21 22:53:49 2024
+# Process ID: 20083
+# Current directory: /home/student/kferdek/UEC2/uec2_lab6_kferdek/fpga/build
+# Command line: vivado vga_project.xpr
+# Log file: /home/student/kferdek/UEC2/uec2_lab6_kferdek/fpga/build/vivado.log
+# Journal file: /home/student/kferdek/UEC2/uec2_lab6_kferdek/fpga/build/vivado.jou
+# Running On: cadence25, OS: Linux, CPU Frequency: 3227.539 MHz, CPU Physical cores: 4, Host memory: 16720 MB
+#-----------------------------------------------------------
+start_gui
+open_project vga_project.xpr
+create_ip -name clk_wiz -vendor xilinx.com -library ip -version 6.0 -module_name clk_wiz_0
+set_property -dict [list CONFIG.CLKOUT1_USED {true} CONFIG.USE_INCLK_SWITCHOVER {false} CONFIG.SECONDARY_PORT {clk_50MHz} CONFIG.SECONDARY_IN_FREQ {50.000} CONFIG.CLKOUT2_USED {true} CONFIG.PRIMARY_PORT {clk} CONFIG.CLK_OUT1_PORT {clk_100MHz} CONFIG.CLK_OUT2_PORT {clk_50MHz} CONFIG.CLKOUT2_REQUESTED_OUT_FREQ {50.000} CONFIG.USE_SAFE_CLOCK_STARTUP {true} CONFIG.USE_RESET {false} CONFIG.SECONDARY_SOURCE {Single_ended_clock_capable_pin} CONFIG.CLKIN2_JITTER_PS {166.66} CONFIG.CLKOUT1_DRIVES {BUFGCE} CONFIG.CLKOUT2_DRIVES {BUFGCE} CONFIG.CLKOUT3_DRIVES {BUFGCE} CONFIG.CLKOUT4_DRIVES {BUFGCE} CONFIG.CLKOUT5_DRIVES {BUFGCE} CONFIG.CLKOUT6_DRIVES {BUFGCE} CONFIG.CLKOUT7_DRIVES {BUFGCE} CONFIG.FEEDBACK_SOURCE {FDBK_AUTO} CONFIG.MMCM_CLKIN2_PERIOD {20.0} CONFIG.MMCM_CLKOUT1_DIVIDE {20} CONFIG.NUM_OUT_CLKS {2} CONFIG.CLKOUT2_JITTER {151.636} CONFIG.CLKOUT2_PHASE_ERROR {98.575}] [get_ips clk_wiz_0]
+generate_target {instantiation_template} [get_files /home/student/kferdek/UEC2/uec2_lab6_kferdek/fpga/build/vga_project.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci]
+update_compile_order -fileset sources_1
+set_property generate_synth_checkpoint false [get_files  /home/student/kferdek/UEC2/uec2_lab6_kferdek/fpga/build/vga_project.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci]
+generate_target all [get_files  /home/student/kferdek/UEC2/uec2_lab6_kferdek/fpga/build/vga_project.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci]
+export_ip_user_files -of_objects [get_files /home/student/kferdek/UEC2/uec2_lab6_kferdek/fpga/build/vga_project.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files /home/student/kferdek/UEC2/uec2_lab6_kferdek/fpga/build/vga_project.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci] -directory /home/student/kferdek/UEC2/uec2_lab6_kferdek/fpga/build/vga_project.ip_user_files/sim_scripts -ip_user_files_dir /home/student/kferdek/UEC2/uec2_lab6_kferdek/fpga/build/vga_project.ip_user_files -ipstatic_source_dir /home/student/kferdek/UEC2/uec2_lab6_kferdek/fpga/build/vga_project.ip_user_files/ipstatic -lib_map_path [list {modelsim=/home/student/kferdek/UEC2/uec2_lab6_kferdek/fpga/build/vga_project.cache/compile_simlib/modelsim} {questa=/home/student/kferdek/UEC2/uec2_lab6_kferdek/fpga/build/vga_project.cache/compile_simlib/questa} {xcelium=/home/student/kferdek/UEC2/uec2_lab6_kferdek/fpga/build/vga_project.cache/compile_simlib/xcelium} {vcs=/home/student/kferdek/UEC2/uec2_lab6_kferdek/fpga/build/vga_project.cache/compile_simlib/vcs} {riviera=/home/student/kferdek/UEC2/uec2_lab6_kferdek/fpga/build/vga_project.cache/compile_simlib/riviera}] -use_ip_compiled_libs -force -quiet
