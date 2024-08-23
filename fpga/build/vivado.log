@@ -2,19 +2,16 @@
 # Vivado v2021.2 (64-bit)
 # SW Build 3367213 on Tue Oct 19 02:47:39 MDT 2021
 # IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
-# Start of session at: Tue May 21 22:53:49 2024
-# Process ID: 20083
+# Start of session at: Wed May 22 18:24:01 2024
+# Process ID: 29959
 # Current directory: /home/student/kferdek/UEC2/uec2_lab6_kferdek/fpga/build
-# Command line: vivado vga_project.xpr
+# Command line: vivado uart_project.xpr
 # Log file: /home/student/kferdek/UEC2/uec2_lab6_kferdek/fpga/build/vivado.log
 # Journal file: /home/student/kferdek/UEC2/uec2_lab6_kferdek/fpga/build/vivado.jou
-# Running On: cadence25, OS: Linux, CPU Frequency: 3227.539 MHz, CPU Physical cores: 4, Host memory: 16720 MB
+# Running On: cadence25, OS: Linux, CPU Frequency: 3899.414 MHz, CPU Physical cores: 4, Host memory: 16720 MB
 #-----------------------------------------------------------
 start_gui
-open_project vga_project.xpr
-INFO: [filemgmt 56-3] Default IP Output Path : Could not find the directory '/home/student/kferdek/UEC2/uec2_lab6_kferdek/fpga/build/vga_project.gen/sources_1'.
-Scanning sources...
-Finished scanning sources
+open_project uart_project.xpr
 WARNING: [Board 49-26] cannot add Board Part xilinx.com:k26c:part0:1.2 available at /home_local/Xilinx/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/k26c/1.2/board.xml as part xck26-sfvc784-2lv-c specified in board_part file is either invalid or not available
 WARNING: [Board 49-26] cannot add Board Part xilinx.com:k26c:part0:1.3 available at /home_local/Xilinx/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/k26c/1.3/board.xml as part xck26-sfvc784-2lv-c specified in board_part file is either invalid or not available
 WARNING: [Board 49-26] cannot add Board Part xilinx.com:k26i:part0:1.2 available at /home_local/Xilinx/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/k26i/1.2/board.xml as part xck26-sfvc784-2lvi-i specified in board_part file is either invalid or not available
@@ -72,31 +69,59 @@ WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216_es:part0:1.2 avai
 WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216ld:part0:2.0 available at /home_local/Xilinx/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216ld/production/2.0/board.xml as part xczu59dr-ffvf1760-2-i specified in board_part file is either invalid or not available
 WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216ld_es:part0:1.0 available at /home_local/Xilinx/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216ld/es/1.0/board.xml as part xczu59dr-ffvf1760-2-i-es1 specified in board_part file is either invalid or not available
 WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670:part0:1.0 available at /home_local/Xilinx/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670/1.0/board.xml as part xczu67dr-fsve1156-2-i specified in board_part file is either invalid or not available
+INFO: [filemgmt 56-3] Default IP Output Path : Could not find the directory '/home/student/kferdek/UEC2/uec2_lab6_kferdek/fpga/build/uart_project.gen/sources_1'.
+Scanning sources...
+Finished scanning sources
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home_local/Xilinx/Vivado/2021.2/data/ip'.
-open_project: Time (s): cpu = 00:00:17 ; elapsed = 00:00:07 . Memory (MB): peak = 7733.090 ; gain = 41.090 ; free physical = 4158 ; free virtual = 17405
-ERROR: [Common 17-69] Command failed: Port 'clk' already exists
-CRITICAL WARNING: [IP_Flow 19-1747] Failed to deliver file '/home_local/Xilinx/Vivado/2021.2/data/ip/xilinx/clk_wiz_v6_0/elaborate/ports.xit': ERROR: [Common 17-69] Command failed: Port 'clk' already exists
-
-ERROR: [IP_Flow 19-167] Failed to deliver one or more file(s).
-ERROR: [IP_Flow 19-3541] IP Elaboration error: Failed to generate IP 'clk_wiz_0'. Failed to generate 'Elaborate Ports' outputs: 
-create_ip -name clk_wiz -vendor xilinx.com -library ip -version 6.0 -module_name clk_wiz_0
-set_property -dict [list CONFIG.CLKOUT1_USED {true} CONFIG.USE_INCLK_SWITCHOVER {false} CONFIG.SECONDARY_PORT {clk_50MHz} CONFIG.SECONDARY_IN_FREQ {50.000} CONFIG.CLKOUT2_USED {true} CONFIG.PRIMARY_PORT {clk} CONFIG.CLK_OUT1_PORT {clk_100MHz} CONFIG.CLK_OUT2_PORT {clk_50MHz} CONFIG.CLKOUT2_REQUESTED_OUT_FREQ {50.000} CONFIG.USE_SAFE_CLOCK_STARTUP {true} CONFIG.USE_RESET {false} CONFIG.SECONDARY_SOURCE {Single_ended_clock_capable_pin} CONFIG.CLKIN2_JITTER_PS {166.66} CONFIG.CLKOUT1_DRIVES {BUFGCE} CONFIG.CLKOUT2_DRIVES {BUFGCE} CONFIG.CLKOUT3_DRIVES {BUFGCE} CONFIG.CLKOUT4_DRIVES {BUFGCE} CONFIG.CLKOUT5_DRIVES {BUFGCE} CONFIG.CLKOUT6_DRIVES {BUFGCE} CONFIG.CLKOUT7_DRIVES {BUFGCE} CONFIG.FEEDBACK_SOURCE {FDBK_AUTO} CONFIG.MMCM_CLKIN2_PERIOD {20.0} CONFIG.MMCM_CLKOUT1_DIVIDE {20} CONFIG.NUM_OUT_CLKS {2} CONFIG.CLKOUT2_JITTER {151.636} CONFIG.CLKOUT2_PHASE_ERROR {98.575}] [get_ips clk_wiz_0]
-WARNING: [IP_Flow 19-3374] An attempt to modify the value of disabled parameter 'SECONDARY_PORT' from 'clk_in2' to 'clk_50MHz' has been ignored for IP 'clk_wiz_0'
-WARNING: [IP_Flow 19-3374] An attempt to modify the value of disabled parameter 'SECONDARY_IN_FREQ' from '100.000' to '50.000' has been ignored for IP 'clk_wiz_0'
-WARNING: [IP_Flow 19-3374] An attempt to modify the value of disabled parameter 'MMCM_CLKIN2_PERIOD' from '10.000' to '20.0' has been ignored for IP 'clk_wiz_0'
-generate_target {instantiation_template} [get_files /home/student/kferdek/UEC2/uec2_lab6_kferdek/fpga/build/vga_project.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci]
-INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'clk_wiz_0'...
+open_project: Time (s): cpu = 00:00:20 ; elapsed = 00:00:13 . Memory (MB): peak = 7767.098 ; gain = 75.230 ; free physical = 724 ; free virtual = 11208
 update_compile_order -fileset sources_1
-set_property generate_synth_checkpoint false [get_files  /home/student/kferdek/UEC2/uec2_lab6_kferdek/fpga/build/vga_project.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci]
-generate_target all [get_files  /home/student/kferdek/UEC2/uec2_lab6_kferdek/fpga/build/vga_project.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci]
-INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'clk_wiz_0'...
-INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'clk_wiz_0'...
-INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'clk_wiz_0'...
-INFO: [IP_Flow 19-1686] Generating 'Implementation' target for IP 'clk_wiz_0'...
-INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'clk_wiz_0'...
-export_ip_user_files -of_objects [get_files /home/student/kferdek/UEC2/uec2_lab6_kferdek/fpga/build/vga_project.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci] -no_script -sync -force -quiet
-export_simulation -of_objects [get_files /home/student/kferdek/UEC2/uec2_lab6_kferdek/fpga/build/vga_project.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci] -directory /home/student/kferdek/UEC2/uec2_lab6_kferdek/fpga/build/vga_project.ip_user_files/sim_scripts -ip_user_files_dir /home/student/kferdek/UEC2/uec2_lab6_kferdek/fpga/build/vga_project.ip_user_files -ipstatic_source_dir /home/student/kferdek/UEC2/uec2_lab6_kferdek/fpga/build/vga_project.ip_user_files/ipstatic -lib_map_path [list {modelsim=/home/student/kferdek/UEC2/uec2_lab6_kferdek/fpga/build/vga_project.cache/compile_simlib/modelsim} {questa=/home/student/kferdek/UEC2/uec2_lab6_kferdek/fpga/build/vga_project.cache/compile_simlib/questa} {xcelium=/home/student/kferdek/UEC2/uec2_lab6_kferdek/fpga/build/vga_project.cache/compile_simlib/xcelium} {vcs=/home/student/kferdek/UEC2/uec2_lab6_kferdek/fpga/build/vga_project.cache/compile_simlib/vcs} {riviera=/home/student/kferdek/UEC2/uec2_lab6_kferdek/fpga/build/vga_project.cache/compile_simlib/riviera}] -use_ip_compiled_libs -force -quiet
+reset_run impl_1 -prev_step 
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+[Wed May 22 18:24:53 2024] Launched impl_1...
+Run output will be captured here: /home/student/kferdek/UEC2/uec2_lab6_kferdek/fpga/build/uart_project.runs/impl_1/runme.log
+open_hw_manager
+connect_hw_server -allow_non_jtag
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:3042
+INFO: [Labtools 27-3414] Connected to existing cs_server.
+disconnect_hw_server localhost:3121
+connect_hw_server -url localhost:3121 -allow_non_jtag
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:3042
+INFO: [Labtools 27-3414] Connected to existing cs_server.
+current_hw_target [get_hw_targets */xilinx_tcf/Digilent/210183AB4220A]
+ERROR: [Labtoolstcl 44-199] No matching targets found on connected servers: localhost
+Resolution: If needed connect the desired target to a server and use command refresh_hw_server. Then rerun the get_hw_targets command.
+ERROR: [Common 17-39] 'get_hw_targets' failed due to earlier errors.
+disconnect_hw_server localhost:3121
+connect_hw_server -allow_non_jtag
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:3042
+INFO: [Labtools 27-3414] Connected to existing cs_server.
+disconnect_hw_server localhost:3121
+connect_hw_server -allow_non_jtag
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:3042
+INFO: [Labtools 27-3414] Connected to existing cs_server.
+disconnect_hw_server localhost:3121
+connect_hw_server -allow_non_jtag
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:3042
+INFO: [Labtools 27-3414] Connected to existing cs_server.
+disconnect_hw_server localhost:3121
+connect_hw_server -allow_non_jtag
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:3042
+INFO: [Labtools 27-3414] Connected to existing cs_server.
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:abc:3121
+ERROR: [Labtools 27-2223] Unable to connect to hw_server with URL "TCP:abc:3121".
+Resolution: 1. Check the host name, port number and network connectivity.
+2. Check to ensure the hw_server is running on the target.
+ERROR: [Common 17-39] 'connect_hw_server' failed due to earlier errors.
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:3042
+INFO: [Labtools 27-3414] Connected to existing cs_server.
 exit
-INFO: [Common 17-206] Exiting Vivado at Tue May 21 23:06:07 2024...
+INFO: [Common 17-206] Exiting Vivado at Wed May 22 18:34:20 2024...

@@ -13,10 +13,10 @@
 #                   Project details                   #
 #-----------------------------------------------------#
 # Project name                                  -- EDIT
-set project_name vga_project
+set project_name uart_project
 
 # Top module name                               -- EDIT
-set top_module top_vga_basys3
+set top_module top_uart_basys3
 
 # FPGA device
 set target xc7a35tcpg236-1
@@ -26,46 +26,40 @@ set target xc7a35tcpg236-1
 #-----------------------------------------------------#
 # Specify .xdc files location                   -- EDIT
 set xdc_files {
-    constraints/top_vga_basys3.xdc
+    constraints/basys3.xdc
     constraints/clk_wiz_0.xdc 
 }
 
 # Specify SystemVerilog design files location   -- EDIT
 set sv_files {
-    ../rtl/vga_pkg.sv
-    ../rtl/vga_timing.sv
-    ../rtl/draw_bg.sv
-    ../rtl/draw_rct.sv
-    ../rtl/draw_rect_char.sv
-    ../rtl/char_rom_16x16.sv
-    ../rtl/font_rom.sv
-    ../rtl/draw_rct_ctl.sv
-    ../rtl/top_vga.sv
-    ../rtl/vga_if.sv
-    ../rtl/rgb_wait.sv
-    ../rtl/hv_wait.sv
-    ../rtl/hv_wait_1.sv
-    ../rtl/draw_mouse.sv
-    ../rtl/image_rom.sv
-    ../rtl/mouse_to40.sv
-    rtl/top_vga_basys3.sv
+    ../rtl/top_uart.sv
+    ../rtl/uart_ctr.sv
+    ../rtl/adder.sv
+    ../rtl/hex_chg.sv
+
+    rtl/top_uart_basys3.sv
 }
 
 # Specify Verilog design files location         -- EDIT
  set verilog_files {
     rtl/clk_wiz_0_clk_wiz.v
+    ../rtl/list_ch04_11_mod_m_counter.v
+    ../rtl/list_ch04_15_disp_hex_mux.v
+    ../rtl/list_ch04_20_fifo.v
+    ../rtl/list_ch06_02_debounce.v
+    ../rtl/list_ch08_01_uart_rx.v
+    ../rtl/list_ch08_02_flag_buf.v
+    ../rtl/list_ch08_03_uart_tx.v
+    ../rtl/list_ch08_04_uart.v
  }
 
 # Specify VHDL design files location            -- EDIT
-set vhdl_files {
-    ../rtl/MouseCtl.vhd
-    ../rtl/Ps2Interface.vhd
-    ../rtl/MouseDisplay.vhd
-}
+#set vhdl_files {
+
+
 #    path/to/file.vhd
 # }
 
 # Specify files for a memory initialization     -- EDIT
-set mem_files {
-    rtl/image_rom.data
- }
+#set mem_files {
+    

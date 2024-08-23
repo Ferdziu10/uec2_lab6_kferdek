@@ -17,10 +17,15 @@
  module top_uart_basys3 (
      input  wire clk,
      input  wire RsRx,
-     input  wire sw[0],
+     input  wire sw,
+     input  wire btnC,
+     input  wire btnU,
+     output  wire dp,
      output wire RsTx,
-     output wire JA1,
-     output wire JA2
+     //output wire JA1,
+     //output wire JA2,
+     output wire [6:0] seg,
+     output wire [3:0] an
 
  
      
@@ -34,11 +39,12 @@
  wire clk100MHz;
  wire clk50MHz;
  wire locked;
- wire rx_monitor;
- wire tx_monitor;
+ //wire rx_monitor;
+ //wire tx_monitor;
  wire tx;
  wire rx;
  wire loopback_enable;
+
  
  (* KEEP = "TRUE" *)
  (* ASYNC_REG = "TRUE" *)
@@ -51,11 +57,12 @@
   * Signals assignments
   */
  
- assign JA1 = rx_monitor;
- assign JA2 = tx_monitor;
- assign loopback_enable = sw[0] ;
+ //assign JA1 = rx_monitor;
+ //assign JA2 = tx_monitor;
+ assign loopback_enable = sw ;
  assign rx = RsRx;
  assign RsTx = tx;
+ 
  
  
  /**
@@ -131,13 +138,16 @@
  
  top_uart u_top_uart (
      .clk(clk50MHz),
-     .clk100MHz(clk100MHz),
-     .rst(btnC),
-     .rx_monitor,
-     .tx_monitor,
+     .reset(btnC),
+     .db_ctr (btnU),
+     //.rx_monitor,
+     //.tx_monitor,
      .rx,
      .tx,
-     .loopback_enable
+     //.loopback_enable,
+     .seg,
+     .an,
+     .dp
 
  );
  

@@ -1,0 +1,15 @@
+verilog work ../common/glbl.v \
+            ../../rtl/adder.v \
+            ../../rtl/alu.v \
+            ../../rtl/branch_ctl.v \
+            ../../rtl/control_unit.v \
+            ../../rtl/decode.v \
+            ../../rtl/flopenr.v \
+            ../../rtl/flopr.v \
+            ../../rtl/imem.v \
+            ../../rtl/micro.v \
+            ../../rtl/mux2.v \
+            ../../rtl/regfile.v \
+            micro_test_tb.v 
+
+
